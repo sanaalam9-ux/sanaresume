@@ -23,6 +23,7 @@
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 1px;
+      margin-bottom: 5px;
     }
     h2 {
       border-bottom: 2px solid #444;
@@ -32,19 +33,23 @@
     p, li {
       font-size: 15px;
     }
-    .contact {
+    .top-bar {
       text-align: center;
-      font-size: 14px;
       margin-bottom: 25px;
     }
-    .contact a {
-      color: #0056b3;
+    .top-bar a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 8px 16px;
+      background-color: #0056b3;
+      color: #fff;
       text-decoration: none;
-    }
-    .job-title {
+      border-radius: 4px;
       font-weight: bold;
-      font-size: 16px;
-      margin-top: 8px;
+      transition: background-color 0.2s;
+    }
+    .top-bar a:hover {
+      background-color: #003d80;
     }
     .company {
       font-style: italic;
@@ -59,8 +64,10 @@
 </head>
 <body>
   <h1>SANA CORDEAUX</h1>
-  <div class="contact">
+
+  <div class="top-bar">
     <a href="https://linkedin.com/in/sanacordeaux" target="_blank">LinkedIn</a>
+    <a href="SanaCordeaux_Resume.pdf" download>Download PDF</a>
   </div>
 
   <h2>Executive Summary</h2>
