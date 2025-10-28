@@ -47,6 +47,7 @@
       border-radius: 4px;
       font-weight: bold;
       transition: background-color 0.2s;
+      cursor: pointer;
     }
     .top-bar a:hover {
       background-color: #003d80;
@@ -67,7 +68,7 @@
 
   <div class="top-bar">
     <a href="https://linkedin.com/in/sanacordeaux" target="_blank">LinkedIn</a>
-    <a href="SanaCordeaux_Resume.pdf" download>Download PDF</a>
+    <a href="#" onclick="downloadWithPin()">Download PDF</a>
   </div>
 
   <h2>Executive Summary</h2>
@@ -155,5 +156,25 @@
 
   <h2>Languages</h2>
   <p>Fluent: Urdu</p>
+
+  <!-- PIN-Protected Download Script -->
+  <script>
+  function downloadWithPin() {
+    const correctPin = "5251"; // <-- Change to your desired PIN
+    const userPin = prompt("Enter PIN to download resume:");
+    
+    if(userPin === correctPin) {
+      const link = document.createElement("a");
+      link.href = "SanaCordeaux_Resume.pdf"; // Ensure PDF is in root of repo
+      link.download = "SanaCordeaux_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else if(userPin !== null) {
+      alert("Incorrect PIN. Access denied.");
+    }
+  }
+  </script>
+
 </body>
 </html>
